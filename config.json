@@ -3,11 +3,11 @@
   "provider": {
     "profile": "default",
     "stage": "dev",
-    "region": "ap-south-1"
+    "region": "eu-central-1"
   },
-  "sourceBucket": "sherpafeet-incoming-images",
+  "sourceBucket": "visualpedia-staging-uploads",
   "sourcePrefix": "",
-  "destinationBucket": "carabiner",
+  "destinationBucket": "visualpedia-staging-images",
   "destinationPrefix": "",
   "s3": {
     "params": {
