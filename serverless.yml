@@ -69,12 +69,6 @@ functions:
     memorySize: 1024
     timeout: 30
     handler: handler.processImage
-    events:
-      - s3:
-          bucket: ${file(config.json):sourceBucket}
-          event: s3:ObjectCreated:*
-          rules:
-            - prefix: ${file(config.json):sourcePrefix}
 
 resources:
   Resources:
