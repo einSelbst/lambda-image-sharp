@@ -67,12 +67,12 @@ export default (async function processItem (event) {
         sizes.push(width * 2);
         sizes.push(width * 3);
     } else {
-        sizes.push(Math.round(width / 4));
-        sizes.push(Math.round(width / 2));
+        sizes.push(Math.round(width / 6));  // 1/6
+        sizes.push(Math.round(width / 4));  // 1/4
+        sizes.push(Math.round(width / 3));  // 1/3
+        sizes.push(Math.round(width / 2));  // 1/2
+        sizes.push(Math.round(width / 3) * 2);  // 2/3
         sizes.push(width);
-        sizes.push(Math.round(width * 1.5));
-        sizes.push(width * 2);
-        sizes.push(width * 3);
     }
 
     sizes.map((wth) => {
