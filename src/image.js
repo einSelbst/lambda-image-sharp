@@ -60,6 +60,7 @@ export default (async function processItem (event) {
 
     // Width has to be an integer for sharp.
     const sizes = [];
+    const sizesString = ["1_6", "1_4", "1_3", "1_2", "2_3", "1"];
 
     if (transformtype === "responsive") {
         sizes.push(width);
@@ -92,7 +93,7 @@ export default (async function processItem (event) {
             upload(stream, {
                 ContentType: imageMimeTypes[(await stream.metadata()).format],
                 ...params,
-                Key: makeKey(fileNameKey, context, sizes[index], outputdir),
+                Key: makeKey(fileNameKey, context, sizesString[index], outputdir),
             });
         })
     );
