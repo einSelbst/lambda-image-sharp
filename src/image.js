@@ -75,7 +75,7 @@ export default (async function processItem (event) {
     }
 
     sizes.map((wth) => {
-        if (maxHeight === 'undefined' || maxHeight === null) {
+        if (typeof maxHeight === 'undefined' || maxHeight === null) {
             height.push(Math.round(wth / aspectRatio));
         } else {
             height.push(Math.round(wth * (maxHeight / maxWidth)));
