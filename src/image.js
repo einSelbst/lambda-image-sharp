@@ -52,7 +52,8 @@ export default (async function processItem (event) {
     const dimensions = imageSize(image);
 
     // convert it into a string.
-    const width = parseInt(maxWidth, 10);
+    // const width = parseInt(maxWidth, 10);
+    const width = parseInt(dimensions.width, 10);
 
     const aspectRatio = dimensions.width / dimensions.height;
     const height = [];
