@@ -9,7 +9,7 @@
   },
   "output" : {
     "default" : {
-       "outputdir": "defaulttest/",
+       "outputdir": "",
        "maxWidth": "800"
     },
     "cover" : {
