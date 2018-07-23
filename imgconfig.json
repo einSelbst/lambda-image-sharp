@@ -1,6 +1,7 @@
 {
   "all": [
-    ["rotate"]
+    ["rotate"],
+    ["toFormat", "jpeg", { "quality": 80 }]
   ],
   "key": "%(filename)s-%(sz)s.jpg",
   "params": {
@@ -10,12 +11,12 @@
     "default" : {
        "outputdir": "defaulttest/",
        "maxWidth": "800"
-     },
+    },
     "cover" : {
        "outputdir": "cover/",
        "maxWidth": "800",
        "maxHeight": "240"
-     },
+    },
     "trekgram-incoming" : {
        "outputdir": "trekgram/",
        "transformtype" : "responsive",
