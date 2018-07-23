@@ -84,7 +84,7 @@ export default (async function processItem (event) {
         return wth;
     });
 
-    const streams = await sharpify(image, imgconfig, sizes, 610);
+    const streams = await sharpify(image, imgconfig, sizes, height);
     const context = { key, type };
 
     return Promise.all(
