@@ -85,6 +85,15 @@ export default (async function processItem (event) {
         return wth;
     });
 
+    console.log("sizes (widths): " + sizes);
+    console.log("height: " + height);
+    console.log("width: " + width);
+    console.log("maxWidth: " + maxWidth);
+    console.log("maxHeight: " + maxHeight);
+    console.log("aspectRatio: " + aspectRatio);
+    console.log("dimensions: " + dimensions.width + "/" + dimensions.height);
+    console.log("transformtype: " + transformtype);
+
     const streams = await sharpify(image, imgconfig, sizes, height);
     const context = { key, type };
 
