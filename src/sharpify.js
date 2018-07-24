@@ -31,8 +31,7 @@ export default async function sharpify (image, options, sizes) {
           progressive: true,
           force: true,
         })
-      // operations.forEach(([func, ...parameters]) => clone[func](...parameters))
-      return {image: clone, size}
+      return clone;
     })
   )
 }

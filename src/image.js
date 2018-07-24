@@ -72,13 +72,14 @@ export default (async function processItem (event) {
 
     ].map(({width, key}) => {
         return {
-            width,
             key,
-            height: width * aspectRatio,
+            // we need to have positive integers
+            width: Math.round(width),
+            height: Math.round(width / aspectRatio),
         };
     });
 
-    console.log("sizes (widths): " + sizes);
+    console.log("sizes (widths): " + JSON.stringify(sizes));
     console.log("width: " + width);
     console.log("aspectRatio: " + aspectRatio);
     console.log("dimensions: " + dimensions.width + "/" + dimensions.height);
@@ -88,10 +89,11 @@ export default (async function processItem (event) {
 
     return Promise.all(
         streams.map(async (stream, index) => {
+            const size = sizes[index];
             upload(stream, {
-                ContentType: imageMimeTypes[(await stream.image.metadata()).format],
+                ContentType: imageMimeTypes[(await stream.metadata()).format],
                 ...params,
-                Key: makeKey(fileNameKey, context, stream.size.key, outputdir),
+                Key: makeKey(fileNameKey, context, size.key, outputdir),
             });
         })
     );
