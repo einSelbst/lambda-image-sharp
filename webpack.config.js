@@ -42,7 +42,7 @@ module.exports = {
   },
   externals: ['sharp', 'aws-sdk'],
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    // new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTarballPlugin(sharpTarball, webpackDir),
   ],
 }
