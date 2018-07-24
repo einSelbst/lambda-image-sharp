@@ -10,7 +10,8 @@
     "jsSrc": "src/"
   },
   "scripts": {
-    "deploy": "serverless deploy -v"
+    "deploy": "serverless deploy -v",
+    "logs": "serverless logs -f sharpImage -t"
   },
   "keywords": [
     "serverless",
@@ -20,31 +21,30 @@
     "resize",
     "optimize"
   ],
-  "author": "Jaikant Kumaran",
+  "author": "Jaikant Kumaran, Silvio Hädrich, Tom Nick",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "2.80.0",
-    "babel-runtime": "6.23.0",
-    "image-size": "0.6.2",
-    "mime-types": "2.1.15",
-    "prettier": "1.5.2",
+    "aws-sdk": "2.279.1",
+    "babel-runtime": "6.26.0",
+    "image-size": "0.6.3",
+    "mime-types": "2.1.19",
+    "prettier": "1.13.7",
     "sharp": "0.18.2",
     "sprintf-js": "1.1.1"
   },
   "devDependencies": {
-    "babel-core": "6.25.0",
-    "babel-eslint": "7.2.3",
+    "babel-core": "6.26.3",
     "babel-loader": "7.1.1",
     "babel-plugin-transform-runtime": "6.23.0",
-    "babel-polyfill": "6.23.0",
-    "babel-preset-env": "1.5.2",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
     "babel-preset-stage-3": "6.24.1",
-    "babel-register": "6.24.1",
+    "babel-register": "6.26.0",
     "decompress": "4.2.0",
     "fs-extra": "3.0.1",
-    "json-loader": "0.5.4",
-    "serverless": "1.16.1",
-    "serverless-webpack": "^1.0.0-rc.4",
+    "json-loader": "0.5.7",
+    "serverless": "1.28.0",
+    "serverless-webpack": "2.0.0",
     "webpack": "3.10.0"
   },
   "babel": {

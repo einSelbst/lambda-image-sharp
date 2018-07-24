@@ -90,7 +90,7 @@ export default (async function processItem (event) {
     return Promise.all(
         streams.map(async (stream, index) => {
             const size = sizes[index];
-            upload(stream, {
+            return upload(stream, {
                 ContentType: imageMimeTypes[(await stream.metadata()).format],
                 ...params,
                 Key: makeKey(fileNameKey, context, size.key, outputdir),

@@ -43,7 +43,7 @@ provider:
               - "*"
 
 custom:
-  webpackIncludeModules: false # disable auto including modules
+  includeModules: false # disable auto including modules
 
 plugins:
   - serverless-webpack

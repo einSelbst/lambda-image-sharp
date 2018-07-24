@@ -1,6 +1,7 @@
 // @ts-check
 import AWS from 'aws-sdk'
 import { config } from './config'
+import { rejects } from 'assert';
 
 const defaultParams = (config.s3 && config.s3.params) || {}
 
@@ -29,7 +30,14 @@ export function upload (data, params = {}, bucket = destinationBucket) {
     Body: data,
   }
 
-  return bucket.upload(s3Params).promise()
+  return new Promise((resolve, reject) => {
+    bucket.upload(s3Params, (err, value) => {
+      if (err) {
+        reject(err)
+      }
+      resolve(value);
+    });
+  })
 }
 
 export function remove (objects, bucket = destinationBucket) {

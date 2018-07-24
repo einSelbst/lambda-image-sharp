@@ -1,5 +1,5 @@
 // @ts-check
-import processItem from './image'
+import processItem from './src/image'
 
 export async function processImage ({ Records: records }, context, callback) {
   try {
