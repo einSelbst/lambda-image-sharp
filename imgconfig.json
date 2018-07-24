@@ -9,20 +9,8 @@
   },
   "output" : {
     "default" : {
-       "outputdir": "",
-       "maxWidth": "800"
-    },
-    "cover" : {
-       "outputdir": "cover/",
-       "maxWidth": "800",
-       "maxHeight": "240"
-    },
-    "trekgram-incoming" : {
-       "outputdir": "trekgram/",
-       "transformtype" : "responsive",
-       "maxWidth": "292",
-       "maxHeight": "292"
-     }
+       "outputdir": ""
+    }
   },
   "operations": [
     ["resize"],

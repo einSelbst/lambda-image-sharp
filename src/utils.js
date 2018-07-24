@@ -1,8 +1,6 @@
+// @ts-check
 import { sprintf } from 'sprintf-js'
 import mime from 'mime-types'
-// import { config } from './config'
-
-// const { destinationPrefix } = config
 
 export function makeKey (template, context, sz, destinationPrefix) {
   if (!template || !context) {

@@ -1,6 +1,6 @@
+// @ts-check
 import processItem from './image'
 
-// eslint-disable-next-line import/prefer-default-export
 export async function processImage ({ Records: records }, context, callback) {
   try {
     await Promise.all(records.map(processItem))

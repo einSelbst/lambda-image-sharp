@@ -1,3 +1,4 @@
+// @ts-check
 import AWS from 'aws-sdk'
 import { config } from './config'
 
